@@ -1,11 +1,15 @@
 public class Kunde extends Mensch{
     
     int kundennummer;
+    int alter;
+    int verwarnungen;
 
 
-    public Kunde(String vorname, String nachname, int kundennummer){
+    public Kunde(String vorname, String nachname, int kundennummer, int alter, int verwarnungen){
         super(vorname, nachname);
         setKundennummer(kundennummer);
+        setAlter(alter);
+        setVerwarnungen(verwarnungen);
     }
 
     public void setKundennummer(int kundennummer) {
@@ -13,6 +17,18 @@ public class Kunde extends Mensch{
     }
     public int getKundennummer() {
         return kundennummer;
+    }
+    public void setAlter(int alter) {
+        this.alter = alter;
+    }
+    public int getAlter() {
+        return alter;
+    }
+    public void setVerwarnungen(int verwarnungen) {
+        this.verwarnungen = verwarnungen;
+    }
+    public int getVerwarnungen() {
+        return verwarnungen;
     }
 
     
