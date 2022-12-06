@@ -11,7 +11,7 @@ public class App {
         demoTest();
         testWarnungen();
         zeigeMedien();
-        ueberschreibeMedien(false);
+        ueberschreibeAusleihe(false);
         aendereSchallplatten(true);
     }
 
@@ -19,6 +19,11 @@ public class App {
 
         Kunde k1 = new Kunde("Lina", "El Bergui", 1234, 15, 0);
         Kunde k2 = new Kunde("Dieter", "Schmidt", 234523456, 18, 6);
+        Kunde k3 = new Kunde("Peter", "Müller", 4, 3789, 6);
+
+        kunden.add(k1);
+        kunden.add(k2);
+        kunden.add(k3);
 
         Schallplatte s1 = new Schallplatte("Platzhalter", 0, 2, false, true);
         Schallplatte s2 = new Schallplatte("Platzhalter3", 0, 3, false, false);
@@ -64,9 +69,9 @@ public class App {
     }
 
     public static void testWarnungen(){
-        for(Kunde kunden : getKunden()){
-            if(kunde.getVerwarnungen > 5){
-                System.out.println(kunde.getVorname + " " + kunde.getNachname + " darf nichts mehr ausleihen!!!");
+        for(Kunde kunde : getKunden()){
+            if(kunde.getVerwarnungen() > 5){
+                System.out.println(kunde.getVorname() + " " + kunde.getNachname() + " darf nichts mehr ausleihen!!!");
             }
         }
     }
@@ -80,17 +85,14 @@ public class App {
         }
     }
 
-    public static void ueberschreibeMedien(boolean Wert){
+    public static void ueberschreibeAusleihe(boolean Wert){
         for(Medium medien : getMedien()){
             medien.setAusgeliehen(Wert);
         }
-        System.out.println("Medien überschrieben!");
+        System.out.println("Ausleihe überschrieben!");
     }
 
     public static void aendereSchallplatten(boolean Wertt){
-        
-        schallplatten.add(s1);
-        schallplatten.add(s2);
         
         for(Schallplatte schallplatten : getSchallplatten()){
             schallplatten.setDarfVerleihen(Wertt);
