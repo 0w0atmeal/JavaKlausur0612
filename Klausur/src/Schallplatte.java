@@ -1,4 +1,4 @@
-public class Schallplatte extends Medium{
+public class Schallplatte extends Medium{ //erbt von Medium
     
     boolean darfVerleihen;
 

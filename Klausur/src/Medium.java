@@ -1,4 +1,4 @@
-public abstract class Medium {
+public abstract class Medium { //abstrakte Oberklasse um redundanten Code zu vermeiden
     String titel;
     int fsk;
     int laenge;
@@ -37,7 +37,7 @@ public abstract class Medium {
 }
   
 
-   public abstract void meineDaten();
+   public abstract void meineDaten(); //abstrakte Methode zur Polymorphie
 
 
 

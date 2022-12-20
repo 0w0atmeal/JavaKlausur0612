@@ -1,4 +1,4 @@
-public class BluRay extends Medium {
+public class BluRay extends Medium { //erbt von Medium
     
     boolean in3D;
 

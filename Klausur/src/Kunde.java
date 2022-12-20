@@ -1,4 +1,4 @@
-public class Kunde extends Mensch{
+public class Kunde extends Mensch{ //erbt von Mensch
     
     int kundennummer;
     int alter;

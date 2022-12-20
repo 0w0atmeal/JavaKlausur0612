@@ -1,4 +1,4 @@
-public class Mitarbeiter extends Mensch{
+public class Mitarbeiter extends Mensch{ //erbt von Mensch
     int mitarbeiternummer;
 
     public Mitarbeiter(String vorname, String nachname, int mitarbeiternummer){

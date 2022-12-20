@@ -1,4 +1,4 @@
-public class DVD extends Medium {
+public class DVD extends Medium { //erbt von Medium
     
     boolean inFullHD;
 

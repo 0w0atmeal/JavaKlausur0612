@@ -1,4 +1,4 @@
-public class CD extends Medium {
+public class CD extends Medium { //erbt von Medium
     
     String cdTyp;
 

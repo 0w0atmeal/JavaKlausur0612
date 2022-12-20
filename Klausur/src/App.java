@@ -11,11 +11,11 @@ public class App {
         demoTest();
         testWarnungen();
         zeigeMedien();
-        ueberschreibeAusleihe(false);
-        aendereSchallplatten(true);
+        ueberschreibeAusleihe(false); //alle Medien werden auf "nicht ausgeliehen" gesetzt (ausgelagert in ueberschreibeAusleihe) 
+        aendereSchallplatten(true); //alle Schallplatten dürfen wieder ausgeliehen werden (ausgelagert in aendereSchallplatten)
     }
 
-    public static void demoTest(){
+    public static void demoTest(){ //Ausleihe in Methode demoTest ausgelagert
 
         Kunde k1 = new Kunde("Lina", "El Bergui", 1234, 15, 0);
         Kunde k2 = new Kunde("Dieter", "Schmidt", 234523456, 18, 6);
@@ -50,13 +50,13 @@ public class App {
         ausgelieheneMedien[2] = d1;
         ausgelieheneMedien[3] = d2;
         ausgelieheneMedien[4] = b1;
-        ausgelieheneMedien[5] = b2; //ein sechstes Mediu kann aufgrund des Arrays nicht ausgeliehen werden
+        ausgelieheneMedien[5] = b2; //ein sechstes Medium kann aufgrund des Arrays nicht ausgeliehen werden
 
-        for(Medium ausgeliehenesMedium : ausgelieheneMedien){
+        for(Medium ausgeliehenesMedium : ausgelieheneMedien){ // Abfrage von Alter und Verleihbarkeitsstatus
             if(ausgeliehenesMedium.getFsk() >  k1.getAlter()){
                 System.out.println("Fsk nicht erfüllt");
             }
-            if(ausgeliehenensMedium.getDarfVerleihen() == false){
+            if(ausgeliehenesMedium.getDarfVerleihen() == false){
                 System.out.println("Schallplatte nicht ausleihbar");
             }
             else{
@@ -68,7 +68,7 @@ public class App {
         schallplatten.add(s2);
     }
 
-    public static void testWarnungen(){
+    public static void testWarnungen(){ //nachdem zuerst die Basiskriterien für eine Ausleihe überprüft wurden, wird jetzt der Kunde auf Warnungen überprüft
         for(Kunde kunde : getKunden()){
             if(kunde.getVerwarnungen() > 5){
                 System.out.println(kunde.getVorname() + " " + kunde.getNachname() + " darf nichts mehr ausleihen!!!");
@@ -76,7 +76,7 @@ public class App {
         }
     }
 
-    public static void zeigeMedien(){
+    public static void zeigeMedien(){ //alle Medien werden nummeriert in einer Liste untereinander ausgegeben
         int i = 1;
         for(Medium medien : getMedien()){
             System.out.print(i + ". ");

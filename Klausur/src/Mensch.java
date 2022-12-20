@@ -1,4 +1,4 @@
-public class Mensch {
+public class Mensch { //Oberklasse Mensch um redundanten Code zu vermeiden
     String vorname; 
     String nachname;
 
